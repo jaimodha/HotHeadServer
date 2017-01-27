@@ -9,7 +9,7 @@ ratpack {
       def scriptPath = "/home/pi/proj/Adafruit_Python_MAX31855/examples/simpletest.py"
       def command = "python $scriptPath"
       def result = command.execute().text as Integer
-      def cylinder = new Cylinder(380)
+      def cylinder = new Cylinder(result)
       def e = new Expando()
       e.CHT1 = cylinder.cht[0]
       e.CHT2 = cylinder.cht[1]
